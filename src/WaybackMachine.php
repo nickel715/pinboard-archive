@@ -52,6 +52,9 @@ class WaybackMachine implements ServiceManagerAwareInterface
      */
     public function submitBookmark(Bookmark $bookmark)
     {
+        if ($this->isCached($bookmark, self::REDIS_BLOCKED)) {
+            return;
+        }
         $baseUrl = 'https://web.archive.org/save/';
         $client = new Client;
         $client->setAdapter(new Curl);
