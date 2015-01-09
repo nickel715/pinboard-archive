@@ -96,11 +96,12 @@ class Main implements ServiceManagerAwareInterface
             if ($this->serviceManager->get('wayback-machine')->isAvailable($bookmark)) {
                 ++$this->available;
             } else {
-                #echo $bookmark->url, PHP_EOL;
                 try {
                     $this->serviceManager->get('wayback-machine')->submitBookmark($bookmark);
                 } catch (\Exception $e) {
-                    #echo $e, PHP_EOL;
+                    if ($e->getCode() != 2) {
+                        echo $e, PHP_EOL;
+                    }
                 }
                 ++$this->unavailable;
             }

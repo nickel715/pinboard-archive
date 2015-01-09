@@ -6,6 +6,7 @@ use \Zend\ServiceManager\ServiceManager;
 use \Zend\ServiceManager\ServiceManagerAwareInterface;
 use \PinboardBookmark as Bookmark;
 use Zend\Http\Client;
+use Zend\Http\Client\Adapter\Curl;
 
 class WaybackMachine implements ServiceManagerAwareInterface
 {
@@ -53,6 +54,7 @@ class WaybackMachine implements ServiceManagerAwareInterface
     {
         $baseUrl = 'https://web.archive.org/save/';
         $client = new Client;
+        $client->setAdapter(new Curl);
         $client->setUri($baseUrl . $bookmark->url);
         $response = $client->send();
         if (strpos($response->getBody(), 'cannot be crawled') !== false) {
@@ -84,6 +86,7 @@ class WaybackMachine implements ServiceManagerAwareInterface
             return false;
         }
         $client = new Client;
+        $client->setAdapter(new Curl);
         $client->setUri('http://archive.org/wayback/available');
         $client->setParameterGet(['url' => $bookmark->url]);
         $response = json_decode($client->send()->getBody());
