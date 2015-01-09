@@ -1,0 +1,7 @@
+<?php
+
+return array(
+    'redis_connection'  => '', // Redis socket path or ip
+    'pinboard_user'     => null, // leave null if using api token
+    'pinboard_password' => '', // password or api token
+);

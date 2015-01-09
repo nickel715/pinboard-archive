@@ -1,0 +1,28 @@
+{
+    "name": "nickel715/pinboard-archive",
+    "description": "get pinboard bookmarks submit them to archive.org and return statistics about availability",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nicolas Hohm",
+            "email": "nickel7152@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "kijin/pinboard-api": "0.3.*",
+        "zendframework/zend-servicemanager": "2.3",
+        "zendframework/zend-http": "2.3",
+        "zendframework/zend-config": "2.3"
+    },
+    "require-dev": {
+        "raulfraile/ladybug": "1.*",
+        "phpdocumentor/reflection-docblock": "2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "PinboardArchive\\": "src/"
+        }
+    }
+}

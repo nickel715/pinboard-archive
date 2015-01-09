@@ -1,0 +1,1054 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "3b3a34f976f81ee5ca6ba17927de348a",
+    "packages": [
+        {
+            "name": "kijin/pinboard-api",
+            "version": "0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kijin/pinboard-api.git",
+                "reference": "8389201e943bb093592540df19e120a0ac9ab546"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kijin/pinboard-api/zipball/8389201e943bb093592540df19e120a0ac9ab546",
+                "reference": "8389201e943bb093592540df19e120a0ac9ab546",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "pinboard-api.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kijin Sung",
+                    "email": "kijin@kijinsung.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Erin Dalzell",
+                    "email": "erin@thedalzells.org",
+                    "role": "Contributor"
+                }
+            ],
+            "description": "Pinboard API Client in PHP",
+            "homepage": "https://github.com/kijin/pinboard-api",
+            "keywords": [
+                "bookmark",
+                "pinboard"
+            ],
+            "time": "2014-10-29 10:13:36"
+        },
+        {
+            "name": "zendframework/zend-config",
+            "version": "2.3.0",
+            "target-dir": "Zend/Config",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/Component_ZendConfig.git",
+                "reference": "98ce618c4db60de1101cba39e9a1c2ef2c24f40f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendConfig/zipball/98ce618c4db60de1101cba39e9a1c2ef2c24f40f",
+                "reference": "98ce618c4db60de1101cba39e9a1c2ef2c24f40f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.23",
+                "zendframework/zend-stdlib": "self.version"
+            },
+            "require-dev": {
+                "zendframework/zend-filter": "self.version",
+                "zendframework/zend-i18n": "self.version",
+                "zendframework/zend-json": "self.version",
+                "zendframework/zend-servicemanager": "self.version"
+            },
+            "suggest": {
+                "zendframework/zend-filter": "Zend\\Filter component",
+                "zendframework/zend-i18n": "Zend\\I18n component",
+                "zendframework/zend-json": "Zend\\Json to use the Json reader or writer classes",
+                "zendframework/zend-servicemanager": "Zend\\ServiceManager for use with the Config Factory to retrieve reader and writer instances"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev",
+                    "dev-develop": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Zend\\Config\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "provides a nested object property based user interface for accessing this configuration data within application code",
+            "keywords": [
+                "config",
+                "zf2"
+            ],
+            "time": "2014-03-14 16:20:50"
+        },
+        {
+            "name": "zendframework/zend-escaper",
+            "version": "2.3.0",
+            "target-dir": "Zend/Escaper",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/Component_ZendEscaper.git",
+                "reference": "ec2614db2ea860c5765a0adba687eacb365ad355"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendEscaper/zipball/ec2614db2ea860c5765a0adba687eacb365ad355",
+                "reference": "ec2614db2ea860c5765a0adba687eacb365ad355",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.23"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev",
+                    "dev-develop": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Zend\\Escaper\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "keywords": [
+                "escaper",
+                "zf2"
+            ],
+            "time": "2014-03-14 16:21:02"
+        },
+        {
+            "name": "zendframework/zend-http",
+            "version": "2.3.0",
+            "target-dir": "Zend/Http",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/Component_ZendHttp.git",
+                "reference": "6d4314b1e3309071f3ab958186911296d70fe5fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendHttp/zipball/6d4314b1e3309071f3ab958186911296d70fe5fe",
+                "reference": "6d4314b1e3309071f3ab958186911296d70fe5fe",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.23",
+                "zendframework/zend-loader": "self.version",
+                "zendframework/zend-stdlib": "self.version",
+                "zendframework/zend-uri": "self.version",
+                "zendframework/zend-validator": "self.version"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev",
+                    "dev-develop": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Zend\\Http\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "provides an easy interface for performing Hyper-Text Transfer Protocol (HTTP) requests",
+            "keywords": [
+                "http",
+                "zf2"
+            ],
+            "time": "2014-03-14 16:21:21"
+        },
+        {
+            "name": "zendframework/zend-loader",
+            "version": "2.3.0",
+            "target-dir": "Zend/Loader",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/Component_ZendLoader.git",
+                "reference": "517f39de5c547d438556e86c270b384c9dee5b18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendLoader/zipball/517f39de5c547d438556e86c270b384c9dee5b18",
+                "reference": "517f39de5c547d438556e86c270b384c9dee5b18",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.23"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev",
+                    "dev-develop": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Zend\\Loader\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "keywords": [
+                "loader",
+                "zf2"
+            ],
+            "time": "2014-03-14 16:21:32"
+        },
+        {
+            "name": "zendframework/zend-servicemanager",
+            "version": "2.3.0",
+            "target-dir": "Zend/ServiceManager",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/Component_ZendServiceManager.git",
+                "reference": "310187f89fe830ed4484499f78338631f29d25c7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendServiceManager/zipball/310187f89fe830ed4484499f78338631f29d25c7",
+                "reference": "310187f89fe830ed4484499f78338631f29d25c7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.23"
+            },
+            "require-dev": {
+                "zendframework/zend-di": "self.version"
+            },
+            "suggest": {
+                "zendframework/zend-di": "Zend\\Di component"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev",
+                    "dev-develop": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Zend\\ServiceManager\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "keywords": [
+                "servicemanager",
+                "zf2"
+            ],
+            "time": "2014-03-14 16:22:14"
+        },
+        {
+            "name": "zendframework/zend-stdlib",
+            "version": "2.3.0",
+            "target-dir": "Zend/Stdlib",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/Component_ZendStdlib.git",
+                "reference": "d1c481b8a43f2f079b16d3567960ba539e9dacaa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendStdlib/zipball/d1c481b8a43f2f079b16d3567960ba539e9dacaa",
+                "reference": "d1c481b8a43f2f079b16d3567960ba539e9dacaa",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.23"
+            },
+            "require-dev": {
+                "zendframework/zend-eventmanager": "self.version",
+                "zendframework/zend-serializer": "self.version",
+                "zendframework/zend-servicemanager": "self.version"
+            },
+            "suggest": {
+                "zendframework/zend-eventmanager": "To support aggregate hydrator usage",
+                "zendframework/zend-serializer": "Zend\\Serializer component",
+                "zendframework/zend-servicemanager": "To support hydrator plugin manager usage"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev",
+                    "dev-develop": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Zend\\Stdlib\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "keywords": [
+                "stdlib",
+                "zf2"
+            ],
+            "time": "2014-03-14 16:22:22"
+        },
+        {
+            "name": "zendframework/zend-uri",
+            "version": "2.3.0",
+            "target-dir": "Zend/Uri",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/Component_ZendUri.git",
+                "reference": "83e617b6273625eeb771c8fb3e886a728fd9dfa4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendUri/zipball/83e617b6273625eeb771c8fb3e886a728fd9dfa4",
+                "reference": "83e617b6273625eeb771c8fb3e886a728fd9dfa4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.23",
+                "zendframework/zend-escaper": "self.version",
+                "zendframework/zend-validator": "self.version"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev",
+                    "dev-develop": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Zend\\Uri\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "a component that aids in manipulating and validating » Uniform Resource Identifiers (URIs)",
+            "keywords": [
+                "uri",
+                "zf2"
+            ],
+            "time": "2014-03-14 16:22:34"
+        },
+        {
+            "name": "zendframework/zend-validator",
+            "version": "2.3.0",
+            "target-dir": "Zend/Validator",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/Component_ZendValidator.git",
+                "reference": "1d4526a1f7db36d725a3a526d8951c1a6d0d69b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/Component_ZendValidator/zipball/1d4526a1f7db36d725a3a526d8951c1a6d0d69b3",
+                "reference": "1d4526a1f7db36d725a3a526d8951c1a6d0d69b3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.23",
+                "zendframework/zend-stdlib": "self.version"
+            },
+            "require-dev": {
+                "zendframework/zend-db": "self.version",
+                "zendframework/zend-filter": "self.version",
+                "zendframework/zend-i18n": "self.version",
+                "zendframework/zend-math": "self.version",
+                "zendframework/zend-servicemanager": "self.version",
+                "zendframework/zend-session": "self.version",
+                "zendframework/zend-uri": "self.version"
+            },
+            "suggest": {
+                "zendframework/zend-db": "Zend\\Db component",
+                "zendframework/zend-filter": "Zend\\Filter component, required by the Digits validator",
+                "zendframework/zend-i18n": "Zend\\I18n component to allow translation of validation error messages as well as to use the various Date validators",
+                "zendframework/zend-math": "Zend\\Math component",
+                "zendframework/zend-resources": "Translations of validator messages",
+                "zendframework/zend-servicemanager": "Zend\\ServiceManager component to allow using the ValidatorPluginManager and validator chains",
+                "zendframework/zend-session": "Zend\\Session component",
+                "zendframework/zend-uri": "Zend\\Uri component, required by the Uri and Sitemap\\Loc validators"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev",
+                    "dev-develop": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Zend\\Validator\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "provides a set of commonly needed validators",
+            "keywords": [
+                "validator",
+                "zf2"
+            ],
+            "time": "2014-03-14 16:22:37"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "phpdocumentor/reflection-docblock",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
+                "reference": "38743b677965c48a637097b2746a281264ae2347"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/38743b677965c48a637097b2746a281264ae2347",
+                "reference": "38743b677965c48a637097b2746a281264ae2347",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*@stable"
+            },
+            "suggest": {
+                "dflydev/markdown": "1.0.*",
+                "erusev/parsedown": "~0.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "phpDocumentor": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike van Riel",
+                    "email": "mike.vanriel@naenius.com"
+                }
+            ],
+            "time": "2014-08-09 10:27:07"
+        },
+        {
+            "name": "ptachoire/cssembed",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/krichprollsch/phpCssEmbed.git",
+                "reference": "406c6d5b846cafa9186f9944a6210d0e6fed154b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/krichprollsch/phpCssEmbed/zipball/406c6d5b846cafa9186f9944a6210d0e6fed154b",
+                "reference": "406c6d5b846cafa9186f9944a6210d0e6fed154b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "CssEmbed": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pierre Tachoire",
+                    "email": "pierre.tachoire@gmail.com"
+                }
+            ],
+            "description": "Css url embed library.",
+            "homepage": "https://github.com/krichprollsch/phpCssEmbed",
+            "keywords": [
+                "css",
+                "url"
+            ],
+            "time": "2013-07-22 20:01:48"
+        },
+        {
+            "name": "raulfraile/ladybug",
+            "version": "v1.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/raulfraile/ladybug.git",
+                "reference": "1fb36821c3e91bd9a030335df452b264811449bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/raulfraile/ladybug/zipball/1fb36821c3e91bd9a030335df452b264811449bf",
+                "reference": "1fb36821c3e91bd9a030335df452b264811449bf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9",
+                "ptachoire/cssembed": "v1.0.2",
+                "raulfraile/ladybug-plugin-extra": "~1.0.0",
+                "raulfraile/ladybug-theme-modern": ">=1.0.7,<2.0",
+                "symfony/config": ">=2.0",
+                "symfony/console": ">=2.0",
+                "symfony/dependency-injection": ">=2.0",
+                "symfony/finder": ">=2.0",
+                "twig/twig": ">=1.7.0"
+            },
+            "require-dev": {
+                "jms/serializer": ">=0.11.0",
+                "mockery/mockery": "0.9.1",
+                "phpdocumentor/reflection-docblock": "2.0.0",
+                "phpunit/phpunit": "~4.0",
+                "symfony/dom-crawler": ">=2.0.4"
+            },
+            "suggest": {
+                "jms/serializer": "Required to serialize data to XML and JSON",
+                "phpdocumentor/reflection-docblock": "Required to display object methods description",
+                "symfony/yaml": "Required to serialize data to YAML format"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Ladybug\\Theme": [
+                        "../ladybug-themes",
+                        "data/themes"
+                    ],
+                    "Ladybug\\Plugin": [
+                        "../ladybug-plugins",
+                        "data/plugins"
+                    ],
+                    "Ladybug": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raul Fraile",
+                    "email": "raulfraile@gmail.com",
+                    "homepage": "http://www.raulfb.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Simple and Extensible PHP Dumper",
+            "homepage": "https://github.com/raulfraile/ladybug",
+            "keywords": [
+                "dump",
+                "dumper",
+                "ladybug",
+                "print_r",
+                "var_dump"
+            ],
+            "time": "2014-08-23 19:43:25"
+        },
+        {
+            "name": "raulfraile/ladybug-installer",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/raulfraile/ladybug-installer.git",
+                "reference": "04f38f50cac673d3ca93de9c0805889e37804b33"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/raulfraile/ladybug-installer/zipball/04f38f50cac673d3ca93de9c0805889e37804b33",
+                "reference": "04f38f50cac673d3ca93de9c0805889e37804b33",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "*"
+            },
+            "require-dev": {
+                "composer/composer": "1.*",
+                "mockery/mockery": "0.8.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "\\Ladybug\\LadybugPlugin"
+            },
+            "autoload": {
+                "psr-0": {
+                    "Ladybug": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Unified installer for ladybug addons",
+            "keywords": [
+                "installer",
+                "ladybug",
+                "plugins",
+                "themes"
+            ],
+            "time": "2013-09-21 23:28:23"
+        },
+        {
+            "name": "raulfraile/ladybug-plugin-extra",
+            "version": "v1.0.1",
+            "target-dir": "Ladybug/Plugin/Extra",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/raulfraile/ladybug-plugin-extra.git",
+                "reference": "d240770a4c610e26657e5edc0edaace6d07187b2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/raulfraile/ladybug-plugin-extra/zipball/d240770a4c610e26657e5edc0edaace6d07187b2",
+                "reference": "d240770a4c610e26657e5edc0edaace6d07187b2",
+                "shasum": ""
+            },
+            "require": {
+                "raulfraile/ladybug-installer": "~1.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.8.0",
+                "raulfraile/ladybug": "~1.0.0"
+            },
+            "type": "ladybug-plugin",
+            "extra": {
+                "ladybug_name": "Extra"
+            },
+            "autoload": {
+                "psr-0": {
+                    "Ladybug\\Plugin\\Extra\\": ""
+                },
+                "files": [
+                    "Resources/php/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Extra plugin for ladybug",
+            "keywords": [
+                "ladybug",
+                "plugin"
+            ],
+            "time": "2013-09-29 10:19:08"
+        },
+        {
+            "name": "raulfraile/ladybug-theme-modern",
+            "version": "v1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/raulfraile/ladybug-theme-modern.git",
+                "reference": "0271ed62bc45397be9e346c9c19a0ae0d811ef8e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/raulfraile/ladybug-theme-modern/zipball/0271ed62bc45397be9e346c9c19a0ae0d811ef8e",
+                "reference": "0271ed62bc45397be9e346c9c19a0ae0d811ef8e",
+                "shasum": ""
+            },
+            "require": {
+                "raulfraile/ladybug-installer": "~1.0.0"
+            },
+            "type": "ladybug-theme",
+            "extra": {
+                "ladybug_name": "Modern"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Theme 'modern' for ladybug",
+            "keywords": [
+                "dump",
+                "ladybug",
+                "print_r",
+                "theme",
+                "var_dump"
+            ],
+            "time": "2014-08-21 08:27:46"
+        },
+        {
+            "name": "symfony/config",
+            "version": "v2.6.3",
+            "target-dir": "Symfony/Component/Config",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Config.git",
+                "reference": "d94f222eff99a22ce313555b78642b4873418d56"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Config/zipball/d94f222eff99a22ce313555b78642b4873418d56",
+                "reference": "d94f222eff99a22ce313555b78642b4873418d56",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/filesystem": "~2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Config\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Config Component",
+            "homepage": "http://symfony.com",
+            "time": "2015-01-03 08:01:59"
+        },
+        {
+            "name": "symfony/console",
+            "version": "v2.6.3",
+            "target-dir": "Symfony/Component/Console",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Console.git",
+                "reference": "6ac6491ff60c0e5a941db3ccdc75a07adbb61476"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/6ac6491ff60c0e5a941db3ccdc75a07adbb61476",
+                "reference": "6ac6491ff60c0e5a941db3ccdc75a07adbb61476",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/event-dispatcher": "~2.1",
+                "symfony/process": "~2.1"
+            },
+            "suggest": {
+                "psr/log": "For using the console logger",
+                "symfony/event-dispatcher": "",
+                "symfony/process": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Console\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Console Component",
+            "homepage": "http://symfony.com",
+            "time": "2015-01-06 17:50:02"
+        },
+        {
+            "name": "symfony/dependency-injection",
+            "version": "v2.6.3",
+            "target-dir": "Symfony/Component/DependencyInjection",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/DependencyInjection.git",
+                "reference": "72db9adf2f6c42e773108038bcdaff263f325b4e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/DependencyInjection/zipball/72db9adf2f6c42e773108038bcdaff263f325b4e",
+                "reference": "72db9adf2f6c42e773108038bcdaff263f325b4e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "conflict": {
+                "symfony/expression-language": "<2.6"
+            },
+            "require-dev": {
+                "symfony/config": "~2.2",
+                "symfony/expression-language": "~2.6",
+                "symfony/yaml": "~2.1"
+            },
+            "suggest": {
+                "symfony/config": "",
+                "symfony/proxy-manager-bridge": "Generate service proxies to lazy load them",
+                "symfony/yaml": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\DependencyInjection\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony DependencyInjection Component",
+            "homepage": "http://symfony.com",
+            "time": "2015-01-05 17:41:06"
+        },
+        {
+            "name": "symfony/filesystem",
+            "version": "v2.6.3",
+            "target-dir": "Symfony/Component/Filesystem",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Filesystem.git",
+                "reference": "a1f566d1f92e142fa1593f4555d6d89e3044a9b7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/a1f566d1f92e142fa1593f4555d6d89e3044a9b7",
+                "reference": "a1f566d1f92e142fa1593f4555d6d89e3044a9b7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Filesystem\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Filesystem Component",
+            "homepage": "http://symfony.com",
+            "time": "2015-01-03 21:13:09"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "v2.6.3",
+            "target-dir": "Symfony/Component/Finder",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Finder.git",
+                "reference": "16513333bca64186c01609961a2bb1b95b5e1355"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/16513333bca64186c01609961a2bb1b95b5e1355",
+                "reference": "16513333bca64186c01609961a2bb1b95b5e1355",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Finder\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Finder Component",
+            "homepage": "http://symfony.com",
+            "time": "2015-01-03 08:01:59"
+        },
+        {
+            "name": "twig/twig",
+            "version": "v1.16.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/Twig.git",
+                "reference": "6dc11a1e8ecfc30e2c68aaeb218148409d8e68af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/6dc11a1e8ecfc30e2c68aaeb218148409d8e68af",
+                "reference": "6dc11a1e8ecfc30e2c68aaeb218148409d8e68af",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.16-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com",
+                    "role": "Project Founder"
+                },
+                {
+                    "name": "Twig Team",
+                    "homepage": "http://twig.sensiolabs.org/contributors",
+                    "role": "Contributors"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "http://twig.sensiolabs.org",
+            "keywords": [
+                "templating"
+            ],
+            "time": "2014-12-25 19:58:19"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.5.0"
+    },
+    "platform-dev": []
+}
