@@ -2,41 +2,29 @@
 
 namespace PinboardArchive;
 
-use \Zend\ServiceManager\ServiceManager;
-use \Zend\ServiceManager\ServiceManagerAwareInterface;
 use \PinboardBookmark as Bookmark;
 
-class Main implements ServiceManagerAwareInterface
+class Main
 {
 
-    /**
-     * @var ServiceManager
-     */
-    protected $serviceManager;
+    protected $pinboardApi;
+    protected $waybackMachine;
 
     protected $allBookmarks = [];
 
     protected $available;
     protected $unavailable;
 
-    /**
-     * Set service manager
-     *
-     * @param ServiceManager $serviceManager
-     */
-    public function __construct(ServiceManager $serviceManager)
+    public function setPinboardApi($pinboardApi)
     {
-        $this->setServiceManager($serviceManager);
+        $this->pinboardApi = $pinboardApi;
+        return $this;
     }
 
-    /**
-     * Set service manager
-     *
-     * @param ServiceManager $serviceManager
-     */
-    public function setServiceManager(ServiceManager $serviceManager)
+    public function setWaybackMachine($waybackMachine)
     {
-        $this->serviceManager = $serviceManager;
+        $this->waybackMachine = $waybackMachine;
+        return $this;
     }
 
     /**
@@ -69,7 +57,7 @@ class Main implements ServiceManagerAwareInterface
     protected function getAllBookmarks()
     {
         if (empty($this->allBookmarks)) {
-            $this->allBookmarks = $this->serviceManager->get('pinboard-api')->get_all();
+            $this->allBookmarks = $this->pinboardApi->get_all();
         }
         return $this->allBookmarks;
     }
@@ -93,11 +81,11 @@ class Main implements ServiceManagerAwareInterface
         $this->unavailable = 0;
 
         foreach ($this->getAllBookmarks() as $bookmark) {
-            if ($this->serviceManager->get('wayback-machine')->isAvailable($bookmark)) {
+            if ($this->waybackMachine->isAvailable($bookmark)) {
                 ++$this->available;
             } else {
                 try {
-                    $this->serviceManager->get('wayback-machine')->submitBookmark($bookmark);
+                    $this->waybackMachine->submitBookmark($bookmark);
                 } catch (\Exception $e) {
                     if ($e->getCode() != 2) {
                         echo $e, PHP_EOL;

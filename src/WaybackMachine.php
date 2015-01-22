@@ -2,13 +2,11 @@
 
 namespace PinboardArchive;
 
-use \Zend\ServiceManager\ServiceManager;
-use \Zend\ServiceManager\ServiceManagerAwareInterface;
 use \PinboardBookmark as Bookmark;
 use Zend\Http\Client;
 use Zend\Http\Client\Adapter\Curl;
 
-class WaybackMachine implements ServiceManagerAwareInterface
+class WaybackMachine
 {
     /**
      * Redis hash with urls blocked by robots.txt
@@ -21,28 +19,13 @@ class WaybackMachine implements ServiceManagerAwareInterface
     const REDIS_AVAILABLE = 'pinboard-archive:available';
 
     /**
-     * @var ServiceManager
+     * @var \Redis
      */
-    protected $serviceManager;
+    protected $redis;
 
-    /**
-     * Set service manager
-     *
-     * @param ServiceManager $serviceManager
-     */
-    public function __construct(ServiceManager $serviceManager)
+    public function setRedis(\Redis $redis)
     {
-        $this->setServiceManager($serviceManager);
-    }
-
-    /**
-     * Set service manager
-     *
-     * @param ServiceManager $serviceManager
-     */
-    public function setServiceManager(ServiceManager $serviceManager)
-    {
-        $this->serviceManager = $serviceManager;
+        $this->redis = $redis;
     }
 
     /**
@@ -102,19 +85,18 @@ class WaybackMachine implements ServiceManagerAwareInterface
 
     public function isCached(Bookmark $bookmark, $redisKey)
     {
-        if ($this->serviceManager->has('redis')) {
-            return $this->serviceManager->get('redis')->hget($redisKey, $bookmark->url);
+        if ($this->redis !== null) {
+            return $this->redis->hget($redisKey, $bookmark->url);
         }
         return false;
     }
 
     protected function setCached(Bookmark $bookmark, $redisKey)
     {
-        if ($this->serviceManager->has('redis')) {
-            $redis = $this->serviceManager->get('redis');
-            $redis->hset($redisKey, $bookmark->url, 1);
-            if ($redis->ttl($redisKey) < 0) {
-                $redis->expire($redisKey, 4*7*24*60*60);
+        if ($this->redis !== null) {
+            $this->redis->hset($redisKey, $bookmark->url, 1);
+            if ($this->redis->ttl($redisKey) < 0) {
+                $this->redis->expire($redisKey, 4*7*24*60*60);
             }
         }
     }

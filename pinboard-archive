@@ -1,0 +1,39 @@
+#!/usr/bin/env php
+<?php
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+
+require_once 'vendor/autoload.php';
+
+$serviceManagerConfig = [
+    'factories' => [
+        'Config' => function ($serviceManager) {
+            return Zend\Config\Factory::fromFile('config.php', true);
+        },
+        'PinboardAPI' => function ($serviceManager) {
+            $config = $serviceManager->get('Config');
+            return new PinboardAPI($config->pinboard_user, $config->pinboard_password);
+        },
+        'PinboardArchive\WaybackMachine' => function ($serviceManager) {
+            $waybackMachine = new PinboardArchive\WaybackMachine;
+            if ($serviceManager->has('Redis')) {
+                $waybackMachine->setRedis($serviceManager->get('Redis'));
+            }
+            return $waybackMachine;
+        },
+        'PinboardArchive\Main' => function ($serviceManager) {
+            $main = new PinboardArchive\Main;
+            $main->setPinboardApi($serviceManager->get('PinboardAPI'))
+                ->setWaybackMachine($serviceManager->get('PinboardArchive\WaybackMachine'));
+            return $main;
+        },
+    ],
+    'abstract_factories' => [
+        'PinboardArchive\RedisFactory',
+    ],
+];
+$serviceManager = new \Zend\ServiceManager\ServiceManager(new \Zend\ServiceManager\Config($serviceManagerConfig));
+$serviceManager->get('PinboardArchive\WaybackMachine');
+$main = $serviceManager->get('PinboardArchive\Main');
+echo 'Available: ', $main->getAvailableCount(), PHP_EOL;
+echo 'Unavailable: ', $main->getUnavailableCount(), PHP_EOL;

@@ -12,9 +12,9 @@
     "require": {
         "php": ">=5.5.0",
         "kijin/pinboard-api": "0.3.*",
-        "zendframework/zend-servicemanager": "2.3",
-        "zendframework/zend-http": "2.3",
-        "zendframework/zend-config": "2.3"
+        "zendframework/zend-servicemanager": "2.3.*",
+        "zendframework/zend-http": "2.3.*",
+        "zendframework/zend-config": "2.3.*"
     },
     "require-dev": {
         "raulfraile/ladybug": "1.*",
@@ -24,5 +24,6 @@
         "psr-4": {
             "PinboardArchive\\": "src/"
         }
-    }
+    },
+    "bin": ["pinboard-archive"]
 }
