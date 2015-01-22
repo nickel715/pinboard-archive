@@ -18,7 +18,8 @@
     },
     "require-dev": {
         "raulfraile/ladybug": "1.*",
-        "phpdocumentor/reflection-docblock": "2.*"
+        "phpdocumentor/reflection-docblock": "2.*",
+        "phpunit/phpunit": "4.4.*"
     },
     "autoload": {
         "psr-4": {
