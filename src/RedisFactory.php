@@ -18,7 +18,7 @@ class RedisFactory implements AbstractFactoryInterface
     public function canCreateServiceWithName(ServiceLocatorInterface $serviceLocator, $name, $requestedName)
     {
         $connection = $serviceLocator->get('Config')->redis_connection;
-        return ($name == 'Redis' && class_exists('Redis') && !empty($connection));
+        return ($name == 'redis' && class_exists('Redis') && !empty($connection));
     }
 
     /**
@@ -33,7 +33,7 @@ class RedisFactory implements AbstractFactoryInterface
     {
         $connection = $serviceLocator->get('Config')->redis_connection;
         $redis = new \Redis;
-        if ($redis->connect($connection)) {
+        if (!$redis->connect($connection)) {
             throw new \Exception('Failed to connect to redis');
         }
         return $redis;
