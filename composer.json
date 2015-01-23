@@ -19,7 +19,8 @@
     "require-dev": {
         "raulfraile/ladybug": "1.*",
         "phpdocumentor/reflection-docblock": "2.*",
-        "phpunit/phpunit": "4.4.*"
+        "phpunit/phpunit": "4.4.*",
+        "satooshi/php-coveralls": "0.6.*"
     },
     "autoload": {
         "psr-4": {
