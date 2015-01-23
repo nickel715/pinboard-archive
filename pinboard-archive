@@ -27,13 +27,17 @@ $serviceManagerConfig = [
                 ->setWaybackMachine($serviceManager->get('PinboardArchive\WaybackMachine'));
             return $main;
         },
+        'Zend\Http\Client' => function ($serviceManager) {
+            $client = new Zend\Http\Client;
+            $client->setAdapter(new Zend\Http\Client\Adapter\Curl);
+            return $client;
+        }
     ],
     'abstract_factories' => [
         'PinboardArchive\RedisFactory',
     ],
 ];
 $serviceManager = new \Zend\ServiceManager\ServiceManager(new \Zend\ServiceManager\Config($serviceManagerConfig));
-$serviceManager->get('PinboardArchive\WaybackMachine');
 $main = $serviceManager->get('PinboardArchive\Main');
 echo 'Available: ', $main->getAvailableCount(), PHP_EOL;
 echo 'Unavailable: ', $main->getUnavailableCount(), PHP_EOL;

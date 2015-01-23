@@ -1,10 +1,7 @@
 <?php
 
-use PinboardArchive\Main;
-
 class MainTest extends \PHPUnit_Framework_TestCase
 {
-
     protected $sut;
 
     public function setUp()
