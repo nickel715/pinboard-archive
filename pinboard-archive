@@ -10,28 +10,30 @@ $serviceManagerConfig = [
         'Config' => function ($serviceManager) {
             return Zend\Config\Factory::fromFile('config.php', true);
         },
-        'PinboardAPI' => function ($serviceManager) {
+        PinboardAPI::class => function ($serviceManager) {
             $config = $serviceManager->get('Config');
             return new PinboardAPI($config->pinboard_user, $config->pinboard_password);
         },
-        'PinboardArchive\WaybackMachine' => function ($serviceManager) {
+        \PinboardArchive\WaybackMachine::class => function ($serviceManager) {
             $waybackMachine = new PinboardArchive\WaybackMachine;
             if ($serviceManager->has('Redis')) {
                 $waybackMachine->setRedis($serviceManager->get('Redis'));
             }
+            $waybackMachine->setClient($serviceManager->get(\Zend\Http\Client::class));
             return $waybackMachine;
         },
-        'PinboardArchive\Main' => function ($serviceManager) {
+        \PinboardArchive\Main::class => function ($serviceManager) {
             $main = new PinboardArchive\Main;
             $main->setPinboardApi($serviceManager->get('PinboardAPI'))
-                ->setWaybackMachine($serviceManager->get('PinboardArchive\WaybackMachine'));
+                ->setWaybackMachine($serviceManager->get('PinboardArchive\WaybackMachine'))
+            ;
             return $main;
         },
-        'Zend\Http\Client' => function ($serviceManager) {
+        \Zend\Http\Client::class => function () {
             $client = new Zend\Http\Client;
             $client->setAdapter(new Zend\Http\Client\Adapter\Curl);
             return $client;
-        }
+        },
     ],
     'abstract_factories' => [
         'PinboardArchive\RedisFactory',

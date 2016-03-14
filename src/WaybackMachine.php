@@ -23,18 +23,20 @@ class WaybackMachine
     protected $redis;
 
     /**
-     * @var Zend\Http\Client
+     * @var \Zend\Http\Client
      */
     protected $client;
 
     public function setRedis(\Redis $redis)
     {
         $this->redis = $redis;
+        return $this;
     }
 
     public function setClient(Client $client)
     {
         $this->client = $client;
+        return $this;
     }
 
     /**
